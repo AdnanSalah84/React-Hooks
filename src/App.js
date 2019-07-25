@@ -1,13 +1,16 @@
 import React, {useState} from 'react';
 import './App.css';
 import ImageToggleOnMouseOver  from './ImageToggleOnMouseOver';
+import ImageToggleOnScroll from './ImageToggleOnScroll';
 
 
 function App() {
   return (
     <div className="App">
-      {/* <InputElement />   */}
+      <InputElement /> 
       <ImageChangeOnMouseOver />
+      <hr/>
+      <ImageChangeOnScroll/>
     </div>
   );
 }
@@ -48,5 +51,37 @@ function ImageChangeOnMouseOver(){
    </div>
   );
 }
+
+function ImageChangeOnScroll(){
+  return (
+    <div>
+      {[1124,187,823,1269,1530].map(speakerId => {
+        return (
+          <div key={speakerId}>
+             <ImageToggleOnScroll primaryImg={`./speakers/bw/Speaker-${speakerId}.jpg`} 
+                              secondaryImg={`./speakers/Speaker-${speakerId}.jpg`} alt=""/>
+          </div>
+        )
+      })}
+     
+
+   </div>
+  );
+}
+
+
+// function Syntax () {
+// const [checkBoxValue, setCheckBoxValue] = useState(false);
+
+//   useEffect(() =>{
+//     console.log('in useEffect');
+//     return () =>{
+//       console.log('in useEffect CleanUp');
+//     }
+//   },[]);
+//   return (
+//     <div></div>
+//   );
+// }
 
 export default App;
