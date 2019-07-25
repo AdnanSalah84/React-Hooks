@@ -3,7 +3,6 @@ import './App.css';
 import ImageToggleOnMouseOver  from './ImageToggleOnMouseOver';
 import ImageToggleOnScroll from './ImageToggleOnScroll';
 
-
 function App() {
   return (
     <div className="App">
